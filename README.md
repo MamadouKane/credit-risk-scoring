@@ -23,8 +23,8 @@ An end-to-end credit scoring system that predicts the probability of default of 
 
 |                   | Predicted good (approve)               | Predicted bad (reject)                      |
 | ----------------- | -------------------------------------- | ------------------------------------------- |
-| **Actually good** | 0                                      | $m \times \text{AMT\_CREDIT}$ (lost margin) |
-| **Actually bad**  | $\text{LGD} \times \text{AMT\_CREDIT}$ | 0                                           |
+| **Actually good** | 0                                      | margin × `AMT_CREDIT` (lost margin) |
+| **Actually bad**  | LGD × `AMT_CREDIT` (loss on default) | 0                                           |
 
 - **LGD = 45 %**: the Basel foundation-IRB reference value for senior unsecured exposures. State it as an assumption.
 - **m = margin**: choose a value (for example 5 % of the credit amount over the loan life) and state it as an assumption.
