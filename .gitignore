@@ -1,7 +1,6 @@
-# --- Data ---
-/data/raw/
-/data/interim/
-/data/processed/
+# --- Data (Kaggle licence: never commit) ---
+data/
+*.parquet
 
 # --- Secrets ---
 .env
@@ -36,8 +35,16 @@ htmlcov/
 models/*.pkl
 models/*.joblib
 mlruns/
+mlartifacts/
+mlflow.db
 
 # --- OS / IDE ---
 .DS_Store
 .vscode/
 .idea/
+
+# --- Local Claude working rules ---
+CLAUDE.md
+
+# --- Local learning material ---
+exercises/

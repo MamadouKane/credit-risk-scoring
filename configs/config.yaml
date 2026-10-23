@@ -1,0 +1,42 @@
+# Single source of truth for paths, seeds, costs and scorecard parameters.
+# Paths are relative to the repository root.
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  models: models
+  figures: docs/figures
+  column_descriptions: docs/HomeCredit_columns_description.csv
+
+data:
+  id: SK_ID_CURR
+  target: TARGET
+  tables: [application_train, application_test, bureau, installments_payments]
+  days_employed_placeholder: 365243
+
+split:
+  seed: 42
+  train: 0.70
+  calibration: 0.15
+  test: 0.15
+
+cv:
+  n_splits: 5
+
+# Decision costs (assumptions, stated in the README).
+costs:
+  lgd: 0.45          # Basel F-IRB reference for senior unsecured exposures
+  margin: 0.05       # lost margin on a rejected good client, share of AMT_CREDIT
+  ead_column: AMT_CREDIT
+  lgd_grid: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60]
+
+scorecard:
+  pdo: 20            # points to double the odds
+  base_points: 600
+  base_odds: 50      # good:bad odds at base_points
+  grades: [A, B, C, D, E]
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment: credit-risk-scoring
