@@ -56,7 +56,7 @@ def test_load_table_unknown_name_raises(dirs: tuple[Path, Path]) -> None:
 
 def test_column_descriptions_are_read_as_cp1252(tmp_path: Path) -> None:
     path = tmp_path / "desc.csv"
-    text = ',Table,Row,Description,Special\n1,application,AMT_CREDIT,Credit amount…,\n'
+    text = ",Table,Row,Description,Special\n1,application,AMT_CREDIT,Credit amount…,\n"
     path.write_bytes(text.encode("cp1252"))  # … becomes byte 0x85, invalid in UTF-8
     desc = load_column_descriptions(path)
     assert list(desc.columns) == ["Table", "Row", "Description", "Special"]
