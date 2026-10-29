@@ -73,7 +73,9 @@ def check(raw_dir: Path) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     parser.add_argument("--force", action="store_true", help="re-download even if the files exist")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -87,8 +89,11 @@ def main() -> int:
         archive = download(RAW_DIR)
     except Exception as exc:  # auth error, rules not accepted, network
         log.error("Download failed: %s", exc)
-        log.error("Check ~/.kaggle/kaggle.json and accept the rules at "
-                  "https://www.kaggle.com/competitions/%s/rules", COMPETITION)
+        log.error(
+            "Check ~/.kaggle/kaggle.json and accept the rules at "
+            "https://www.kaggle.com/competitions/%s/rules",
+            COMPETITION,
+        )
         return 1
 
     unzip(archive, RAW_DIR)

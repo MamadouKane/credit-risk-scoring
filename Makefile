@@ -1,7 +1,6 @@
 PYTHON ?= .venv/bin/python
-DAY ?= 01
 
-.PHONY: setup data features train evaluate serve test check lint
+.PHONY: setup data features train evaluate serve test lint docker-build docker-run all
 
 setup:  ## create .venv (Python 3.11) and install the project with dev tools
 	uv venv --python 3.11 .venv
@@ -26,8 +25,14 @@ serve:  ## run the scoring API
 test:  ## run every test
 	$(PYTHON) -m pytest
 
-check:  ## run only one day's tests: make check DAY=03
-	$(PYTHON) -m pytest tests/test_d$(DAY)_*.py -v
-
 lint:
 	$(PYTHON) -m ruff check src tests scripts
+	$(PYTHON) -m ruff format --check src tests scripts
+
+all: features train evaluate  ## full pipeline after `make data`
+
+docker-build:  ## image of the scoring API (needs models/ from `make train`)
+	docker build -t credit-risk-scoring .
+
+docker-run:
+	docker run --rm -p 8000:8000 credit-risk-scoring

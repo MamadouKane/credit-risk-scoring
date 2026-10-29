@@ -1,0 +1,542 @@
+{
+  "n_test": 46127,
+  "default_rate_test": 0.0807,
+  "metrics": {
+    "scorecard": {
+      "auc": 0.7476,
+      "gini": 0.4952,
+      "ks": 0.3731,
+      "pr_auc": 0.2251,
+      "brier": 0.0686
+    },
+    "challenger": {
+      "auc": 0.7772,
+      "gini": 0.5545,
+      "ks": 0.4222,
+      "pr_auc": 0.2641,
+      "brier": 0.0667
+    }
+  },
+  "gini_gain": 0.0593,
+  "decision": {
+    "scorecard": {
+      "threshold": 0.0846,
+      "approval_rate": 0.6659,
+      "default_rate_approved": 0.0394,
+      "cost": 666110175.525,
+      "cost_approve_all": 919493169.525,
+      "cost_per_1000": 14440786.8607,
+      "cost_approve_all_per_1000": 19933946.9188,
+      "saving_per_1000": 5493160.0581
+    },
+    "challenger": {
+      "threshold": 0.097,
+      "approval_rate": 0.7327,
+      "default_rate_approved": 0.0393,
+      "cost": 624275467.65,
+      "cost_approve_all": 919493169.525,
+      "cost_per_1000": 13533840.6497,
+      "cost_approve_all_per_1000": 19933946.9188,
+      "saving_per_1000": 6400106.2691
+    }
+  },
+  "sensitivity": [
+    {
+      "lgd": 0.3,
+      "margin": 0.03,
+      "optimal_threshold": 0.0846,
+      "breakeven": 0.0909,
+      "approval_rate": 0.6665
+    },
+    {
+      "lgd": 0.3,
+      "margin": 0.05,
+      "optimal_threshold": 0.1368,
+      "breakeven": 0.1429,
+      "approval_rate": 0.8358
+    },
+    {
+      "lgd": 0.3,
+      "margin": 0.08,
+      "optimal_threshold": 0.2115,
+      "breakeven": 0.2105,
+      "approval_rate": 0.9346
+    },
+    {
+      "lgd": 0.35,
+      "margin": 0.03,
+      "optimal_threshold": 0.0722,
+      "breakeven": 0.0789,
+      "approval_rate": 0.6033
+    },
+    {
+      "lgd": 0.35,
+      "margin": 0.05,
+      "optimal_threshold": 0.112,
+      "breakeven": 0.125,
+      "approval_rate": 0.771
+    },
+    {
+      "lgd": 0.35,
+      "margin": 0.08,
+      "optimal_threshold": 0.1717,
+      "breakeven": 0.186,
+      "approval_rate": 0.8932
+    },
+    {
+      "lgd": 0.4,
+      "margin": 0.03,
+      "optimal_threshold": 0.0672,
+      "breakeven": 0.0698,
+      "approval_rate": 0.5741
+    },
+    {
+      "lgd": 0.4,
+      "margin": 0.05,
+      "optimal_threshold": 0.107,
+      "breakeven": 0.1111,
+      "approval_rate": 0.7543
+    },
+    {
+      "lgd": 0.4,
+      "margin": 0.08,
+      "optimal_threshold": 0.1692,
+      "breakeven": 0.1667,
+      "approval_rate": 0.8901
+    },
+    {
+      "lgd": 0.45,
+      "margin": 0.03,
+      "optimal_threshold": 0.0622,
+      "breakeven": 0.0625,
+      "approval_rate": 0.5414
+    },
+    {
+      "lgd": 0.45,
+      "margin": 0.05,
+      "optimal_threshold": 0.0846,
+      "breakeven": 0.1,
+      "approval_rate": 0.6665
+    },
+    {
+      "lgd": 0.45,
+      "margin": 0.08,
+      "optimal_threshold": 0.1418,
+      "breakeven": 0.1509,
+      "approval_rate": 0.8456
+    },
+    {
+      "lgd": 0.5,
+      "margin": 0.03,
+      "optimal_threshold": 0.0547,
+      "breakeven": 0.0566,
+      "approval_rate": 0.4878
+    },
+    {
+      "lgd": 0.5,
+      "margin": 0.05,
+      "optimal_threshold": 0.0846,
+      "breakeven": 0.0909,
+      "approval_rate": 0.6665
+    },
+    {
+      "lgd": 0.5,
+      "margin": 0.08,
+      "optimal_threshold": 0.1368,
+      "breakeven": 0.1379,
+      "approval_rate": 0.8358
+    },
+    {
+      "lgd": 0.55,
+      "margin": 0.03,
+      "optimal_threshold": 0.0547,
+      "breakeven": 0.0517,
+      "approval_rate": 0.4878
+    },
+    {
+      "lgd": 0.55,
+      "margin": 0.05,
+      "optimal_threshold": 0.0771,
+      "breakeven": 0.0833,
+      "approval_rate": 0.6301
+    },
+    {
+      "lgd": 0.55,
+      "margin": 0.08,
+      "optimal_threshold": 0.1144,
+      "breakeven": 0.127,
+      "approval_rate": 0.7784
+    },
+    {
+      "lgd": 0.6,
+      "margin": 0.03,
+      "optimal_threshold": 0.0448,
+      "breakeven": 0.0476,
+      "approval_rate": 0.4041
+    },
+    {
+      "lgd": 0.6,
+      "margin": 0.05,
+      "optimal_threshold": 0.0722,
+      "breakeven": 0.0769,
+      "approval_rate": 0.6033
+    },
+    {
+      "lgd": 0.6,
+      "margin": 0.08,
+      "optimal_threshold": 0.107,
+      "breakeven": 0.1176,
+      "approval_rate": 0.7543
+    }
+  ],
+  "grades": [
+    {
+      "grade": "A",
+      "count": 9293,
+      "mean_pd": 0.0165,
+      "observed_default_rate": 0.0179,
+      "exposure": 6586003057.5,
+      "expected_loss": 47649595.5161,
+      "el_rate": 0.0072
+    },
+    {
+      "grade": "B",
+      "count": 9285,
+      "mean_pd": 0.0342,
+      "observed_default_rate": 0.0342,
+      "exposure": 5905843051.5,
+      "expected_loss": 90604365.8377,
+      "el_rate": 0.0153
+    },
+    {
+      "grade": "C",
+      "count": 9143,
+      "mean_pd": 0.0569,
+      "observed_default_rate": 0.0547,
+      "exposure": 5415742845.0,
+      "expected_loss": 138199270.0382,
+      "el_rate": 0.0255
+    },
+    {
+      "grade": "D",
+      "count": 9225,
+      "mean_pd": 0.094,
+      "observed_default_rate": 0.0945,
+      "exposure": 5121671701.5,
+      "expected_loss": 215685350.491,
+      "el_rate": 0.0421
+    },
+    {
+      "grade": "E",
+      "count": 9181,
+      "mean_pd": 0.2025,
+      "observed_default_rate": 0.2035,
+      "exposure": 4560538774.5,
+      "expected_loss": 409495874.7471,
+      "el_rate": 0.0898
+    }
+  ],
+  "fairness": {
+    "gender": [
+      {
+        "group": "F",
+        "count": 30429,
+        "approval_rate": 0.7002,
+        "default_rate_approved": 0.0352,
+        "approval_ratio": 1.0
+      },
+      {
+        "group": "M",
+        "count": 15698,
+        "approval_rate": 0.5994,
+        "default_rate_approved": 0.0488,
+        "approval_ratio": 0.856
+      }
+    ],
+    "age_band": [
+      {
+        "group": "(20, 25]",
+        "count": 1795,
+        "approval_rate": 0.2763,
+        "default_rate_approved": 0.0363,
+        "approval_ratio": 0.3276
+      },
+      {
+        "group": "(25, 35]",
+        "count": 10873,
+        "approval_rate": 0.5195,
+        "default_rate_approved": 0.0435,
+        "approval_ratio": 0.616
+      },
+      {
+        "group": "(35, 45]",
+        "count": 12599,
+        "approval_rate": 0.6651,
+        "default_rate_approved": 0.0384,
+        "approval_ratio": 0.7886
+      },
+      {
+        "group": "(45, 55]",
+        "count": 10518,
+        "approval_rate": 0.7101,
+        "default_rate_approved": 0.0374,
+        "approval_ratio": 0.842
+      },
+      {
+        "group": "(55, 70]",
+        "count": 10342,
+        "approval_rate": 0.8434,
+        "default_rate_approved": 0.0394,
+        "approval_ratio": 1.0
+      }
+    ]
+  },
+  "example_rejected": {
+    "pd": 0.6236,
+    "score": 472.4394,
+    "grade": "E",
+    "reasons": [
+      {
+        "feature": "EXT_SOURCE_3",
+        "text": "Low score from external credit data source 3",
+        "points_lost": 46.1
+      },
+      {
+        "feature": "EXT_SOURCE_2",
+        "text": "Low score from external credit data source 2",
+        "points_lost": 35.9
+      },
+      {
+        "feature": "EXT_SOURCE_1",
+        "text": "Low score from external credit data source 1",
+        "points_lost": 27.4
+      }
+    ]
+  },
+  "drift": {
+    "kaggle_test": [
+      {
+        "variable": "NAME_CONTRACT_TYPE",
+        "psi": 0.2117,
+        "status": "to watch"
+      },
+      {
+        "variable": "AMT_GOODS_PRICE",
+        "psi": 0.0855,
+        "status": "stable"
+      },
+      {
+        "variable": "EXT_SOURCE_1",
+        "psi": 0.0847,
+        "status": "stable"
+      },
+      {
+        "variable": "CREDIT_GOODS_RATIO",
+        "psi": 0.0742,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_ID_PUBLISH",
+        "psi": 0.0676,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_LAST_PHONE_CHANGE",
+        "psi": 0.0517,
+        "status": "stable"
+      },
+      {
+        "variable": "LATE_SHARE",
+        "psi": 0.0492,
+        "status": "stable"
+      },
+      {
+        "variable": "MAX_DAYS_LATE",
+        "psi": 0.0456,
+        "status": "stable"
+      },
+      {
+        "variable": "YEARS_SINCE_LAST_CREDIT",
+        "psi": 0.0398,
+        "status": "stable"
+      },
+      {
+        "variable": "AMT_INCOME_TOTAL",
+        "psi": 0.0196,
+        "status": "stable"
+      },
+      {
+        "variable": "EXT_SOURCE_2",
+        "psi": 0.0142,
+        "status": "stable"
+      },
+      {
+        "variable": "EXT_SOURCE_3",
+        "psi": 0.0079,
+        "status": "stable"
+      },
+      {
+        "variable": "EMPLOYED_YEARS",
+        "psi": 0.0078,
+        "status": "stable"
+      },
+      {
+        "variable": "ORGANIZATION_TYPE",
+        "psi": 0.0058,
+        "status": "stable"
+      },
+      {
+        "variable": "BUREAU_DEBT_INCOME_RATIO",
+        "psi": 0.0036,
+        "status": "stable"
+      },
+      {
+        "variable": "FLOORSMAX_AVG",
+        "psi": 0.003,
+        "status": "stable"
+      },
+      {
+        "variable": "N_ACTIVE",
+        "psi": 0.0022,
+        "status": "stable"
+      },
+      {
+        "variable": "OCCUPATION_TYPE",
+        "psi": 0.0021,
+        "status": "stable"
+      },
+      {
+        "variable": "NAME_EDUCATION_TYPE",
+        "psi": 0.0019,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_REGISTRATION",
+        "psi": 0.0013,
+        "status": "stable"
+      },
+      {
+        "variable": "REGION_RATING_CLIENT_W_CITY",
+        "psi": 0.0001,
+        "status": "stable"
+      },
+      {
+        "variable": "FLAG_DOCUMENT_3",
+        "psi": 0.0,
+        "status": "stable"
+      }
+    ],
+    "simulated": [
+      {
+        "variable": "EXT_SOURCE_3",
+        "psi": 1.0839,
+        "status": "significant shift"
+      },
+      {
+        "variable": "AMT_INCOME_TOTAL",
+        "psi": 0.7663,
+        "status": "significant shift"
+      },
+      {
+        "variable": "ORGANIZATION_TYPE",
+        "psi": 0.0054,
+        "status": "stable"
+      },
+      {
+        "variable": "CREDIT_GOODS_RATIO",
+        "psi": 0.002,
+        "status": "stable"
+      },
+      {
+        "variable": "YEARS_SINCE_LAST_CREDIT",
+        "psi": 0.0017,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_REGISTRATION",
+        "psi": 0.0014,
+        "status": "stable"
+      },
+      {
+        "variable": "OCCUPATION_TYPE",
+        "psi": 0.0013,
+        "status": "stable"
+      },
+      {
+        "variable": "EXT_SOURCE_1",
+        "psi": 0.0011,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_LAST_PHONE_CHANGE",
+        "psi": 0.001,
+        "status": "stable"
+      },
+      {
+        "variable": "EXT_SOURCE_2",
+        "psi": 0.0009,
+        "status": "stable"
+      },
+      {
+        "variable": "FLOORSMAX_AVG",
+        "psi": 0.0008,
+        "status": "stable"
+      },
+      {
+        "variable": "EMPLOYED_YEARS",
+        "psi": 0.0007,
+        "status": "stable"
+      },
+      {
+        "variable": "AMT_GOODS_PRICE",
+        "psi": 0.0007,
+        "status": "stable"
+      },
+      {
+        "variable": "MAX_DAYS_LATE",
+        "psi": 0.0007,
+        "status": "stable"
+      },
+      {
+        "variable": "DAYS_ID_PUBLISH",
+        "psi": 0.0005,
+        "status": "stable"
+      },
+      {
+        "variable": "BUREAU_DEBT_INCOME_RATIO",
+        "psi": 0.0005,
+        "status": "stable"
+      },
+      {
+        "variable": "LATE_SHARE",
+        "psi": 0.0003,
+        "status": "stable"
+      },
+      {
+        "variable": "NAME_EDUCATION_TYPE",
+        "psi": 0.0002,
+        "status": "stable"
+      },
+      {
+        "variable": "N_ACTIVE",
+        "psi": 0.0002,
+        "status": "stable"
+      },
+      {
+        "variable": "NAME_CONTRACT_TYPE",
+        "psi": 0.0001,
+        "status": "stable"
+      },
+      {
+        "variable": "REGION_RATING_CLIENT_W_CITY",
+        "psi": 0.0,
+        "status": "stable"
+      },
+      {
+        "variable": "FLAG_DOCUMENT_3",
+        "psi": 0.0,
+        "status": "stable"
+      }
+    ]
+  }
+}

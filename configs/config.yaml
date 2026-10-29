@@ -31,11 +31,18 @@ costs:
   ead_column: AMT_CREDIT
   lgd_grid: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60]
 
+model:
+  exclude: [SK_ID_CURR, TARGET, CODE_GENDER]   # ids, target, and gender (fairness check only)
+
 scorecard:
   pdo: 20            # points to double the odds
   base_points: 600
   base_odds: 50      # good:bad odds at base_points
   grades: [A, B, C, D, E]
+  min_iv: 0.02       # below: useless variable (Siddiqi)
+  min_bin_size: 0.05 # each bin holds at least 5 % of the rows
+  max_corr: 0.80     # drop the weaker variable of a pair more correlated than this
+  max_features: 20   # a credit committee must be able to read the whole scorecard
 
 mlflow:
   tracking_uri: sqlite:///mlflow.db

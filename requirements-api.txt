@@ -1,0 +1,13 @@
+# Runtime of the scoring API only (the Docker image). Pinned to the versions the models were
+# trained with: a joblib model is only guaranteed to load with the same library versions.
+pandas==3.0.6
+numpy==2.4.6
+pyarrow==25.0.1  # pandas 3 stores text columns with pyarrow: needed to unpickle the models
+pyyaml==6.0.3
+scikit-learn==1.9.1
+optbinning==1.0.0
+xgboost==3.2.0
+fastapi==0.143.2
+uvicorn==0.54.0
+pydantic==2.14.1
+joblib==1.6.0

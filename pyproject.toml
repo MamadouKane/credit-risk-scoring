@@ -47,6 +47,12 @@ testpaths = ["tests"]
 markers = [
     "data: needs the real Kaggle files in data/raw (skipped when they are missing, e.g. in CI)",
 ]
+filterwarnings = [
+    # ortools (used by optbinning) is built with SWIG, which Python 3.11 flags at import time
+    "ignore:builtin type .* has no __module__ attribute:DeprecationWarning",
+    # FastAPI's TestClient still relies on httpx; harmless for the tests
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]
 
 [tool.ruff]
 line-length = 100

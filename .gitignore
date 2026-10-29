@@ -31,9 +31,8 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-# --- Models / artifacts ---
-models/*.pkl
-models/*.joblib
+# --- Models / artifacts (rebuilt by `make train`) ---
+models/
 mlruns/
 mlartifacts/
 mlflow.db
@@ -48,3 +47,6 @@ CLAUDE.md
 
 # --- Local learning material ---
 exercises/
+
+# --- Private learning guide (not published) ---
+guide/
